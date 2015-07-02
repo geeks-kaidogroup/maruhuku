@@ -14,6 +14,37 @@
 	@include wrap;
 	@extend %extend-cf;
 }
+.l-main .breadlist >p {
+	margin:0 0 25px;
+	font-size:14px;
+	line-height:1;
+	a{
+		text-decoration:none;
+		&:hover{
+			text-decoration:underline;
+		}
+	}
+}
+.headline-main{
+	margin:0 0 25px;
+}
+.pagenation{
+	text-align: right;
+	padding: 0 0 25px;
+	li{
+		display: inline;
+		padding: 0 0 0 10px;
+		&:last-child a{
+			text-decoration: none;
+		}
+	}
+}
+.headline-device{
+	margin:0 0 25px 0;
+	padding:7px 25px 7px 25px;
+	font-weight:700;
+	background:url(assets/img/module/headline_bg.png) repeat-y 0 0;
+}
 // ============================
 // l-titlebar
 // ============================
@@ -123,6 +154,9 @@ h4{
 	}
 	.mv-side {
 		float:right;
+		img {
+			display:block;
+		}
 		.mv-side-list {
 			li {
 				margin:0 0 10px 0;
@@ -446,533 +480,391 @@ h4{
 }
 
 /*==============================
-牛嶋塗装工業様_02他店との違い
+専門店の強み
 ==============================*/
-    .infobox {
-        padding: 0 0 30px;
-        line-height: 22px;
-        @extend %extend-cf;
-        font: {
-            size: 14px;
-            color: #434343;
-        }
-        .infobox-thumb{
-            width: 252px;
-            float: left;
-            p.caption{
-                padding: 0 0 0 40px;
-            }
-        }
-        .infobox-text{
-            float: left;
-            width: 527px;
-        }
-        &:last-child{
-            padding: 0 0 260px;
-        }
-    }
-
+.advantage{
+	font-size:14px;
+	h1{
+		margin:0 0 10px 0;
+	}
+	p {
+		margin:0 0 15px 0;
+		line-height:2;
+	}
+	.catchcopy{
+		margin:0 0 50px 0;
+	}
+	.advantage-box{
+		width:819px;
+		margin:0 -38px 50px 0;
+		li{
+			margin:0 38px 0 0;
+			img{
+				margin:0 0 15px 0;
+			}
+			p{
+				margin:0 0 0 0;
+				line-height:1.8;
+			}
+			b {
+				font-weight:700;
+			}
+		}
+	}
+}
 /*==============================
-牛嶋塗装工業様_03職人紹介
+職人の本音
+==============================*/
+.real{
+	.catchcopy{
+		margin:0 0 20px 0;
+	}
+	.real-box{
+		display:table;
+		margin:0 0 50px 0;
+		.box-left,.box-right{
+			display:table-cell;
+			vertical-align:top;
+		}
+		.box-left{
+			padding:0 20px 0 0;
+			width:200px;
+			img{
+				display:block;
+				margin:0 0 20px 0;
+			}
+		}
+		.box-right{
+			table-layout: fixed;
+			border-collapse: separate;
+			border-spacing:0 1px;
+			border-left:solid 1px #352920;
+			border-right:solid 1px #352920;
+			width:560px;
+			color:#333;
+			font-size:16px;
+			line-height:1.5;
+			background:#352920;
+			th,td{
+				padding:25px 10px 25px 10px;
+				border-top:solid 1px #b5b5b5;
+				border-bottom:solid 1px #b5b5b5;
+			}
+			th{
+				border-right:solid 1px #352920;
+				width:220px;
+				text-align:center;
+				background:#f7f7f7;
+				span{
+					font-size:15px;
+				}
+			}
+			td{
+				width:350px;
+				vertical-align:top;
+				background:#FFF;
+			}
+		}
+	}
+}
+/*==============================
+施工の流れ
+==============================*/
+.flow{
+	.catchcopy{
+		margin:0 0 20px 0;
+	}
+	.flow-headline{
+		margin:0 0 20px 0;
+	}
+	.flow-box{
+		display:table;
+		margin:0 0 40px 0;
+		font-size:14px;
+		line-height:2;
+		color:#333;
+		b{
+			font-weight:700;
+		}
+		.box-left,.box-right{
+			display:table-cell;
+			vertical-align:top;
+		}
+		.box-left{
+			padding:0 20px 0 0;
+			width:200px;
+			img{
+				display:block;
+				margin:0 0 20px 0;
+			}
+		}
+	}
+}
+
+// ============================
+// voice
+// ============================
+/*==============================
+お客様の声
 ==============================*/
 
-    .l-cast{
-        @extend %extend-cf;
-        padding: 0 0 30px;
-        &:last-child{
-            padding: 0 0 75px;
-        }
-        .cast-info{
-            padding: 15px 0 0;
-            .cast-info-thumb{
-                width: 220px;   
-                float: left;
-                li{
-                    padding: 0 0 20px;
-                }
-            }
-            .cast-info-table{
-                float: left;
-                width: 560px;
-                font-size: 18px;
-                color: #333333;
-                line-height: 22px;
-                letter-spacing: -1.3px;
-                table,th,td{
-                    border: 1px solid #352920;
-                }
-                th{
-                    width: 208px;
-                    text-align: center;
-                    padding: 15px 0;
-                }
-                td{
-                    padding: 15px 4px 11px 10px;
-                }
-            }
-        }
-    } 
-
-/*牛嶋塗装工業様_04施工の流れ*/
-
-.l-before-contruction{
-    .before-contruction-headline{
-        padding: 0 0 15px;
-    }
+.l-voice {
+	padding:0 0 80px 0;
+	.voice-list {
+		width:810px;
+		a:link,
+		a:visited,
+		a:hover{
+			text-decoration:none;
+		}
+		li {
+			margin:0 30px 30px 0;
+			width:240px;
+			.voice-head:before {
+				display:table;
+			}
+			.voice-head {
+				display:table-cell;
+				padding:5px;
+				margin:0 0 10px 0;
+				width:230px;
+				height:40px;
+				font-size:14px;
+				text-align:center;
+				color:#fff;
+				background:#52171a;
+				vertical-align:middle;
+			}
+			.voice-photo {
+				margin:10px 0 0;
+				img {
+					display:block;
+					line-height:1;
+				}
+			}
+			.voice-detail {
+				padding:10px;
+				background:#f7f7f7;
+				.text {
+					margin:0 0 10px 0;
+					font-size:14px;
+					line-height:20px;
+				}
+				.condition {
+					margin:0 0 5px 0;
+					font-size:12px;
+				}
+				.name {
+					font-size:12px;
+				}
+			}
+		}
+	}
 }
-.l-main-flowcontent{
-    padding: 0 0 205px;
-    h3{
-        padding: 70px 0 30px;
-    }
+.voice-head{
+	color:#783300;
+	.clm-l{
+		float:left;
+		font-size:30px;
+	}
+	.customer-data{
+		float:right;
+		margin:10px 0;
+		font-size:20;
+		text-align:right
+	}
 }
-    .flowbox{
-        @extend %extend-cf;
-        padding: 0 0 18px;
-        p{
-            line-height: 22px;
-            color: #434343;
-            font: {
-                size:14px;
-            }
-        }
-        .flowbox-thumb{
-            width: 345px;
-            float: left;
-        }
-        .flowbox-text{
-            float: left;
-            width: 410px;
-            padding: 0 0 0 20px;
-        }
-    }
-
-/*牛嶋塗装工業様_05お客様が語る牛嶋_一覧 (voice)*/
-.l-voice, .l-works{
-    padding: 20px 0 95px;
+.voice-lead{
+	margin:30px 0;
+	font-size:12px;
 }
-.pagination{
-    text-align: right;
-    padding: 0 0 25px;
-    li{
-        display: inline;
-        padding: 0 0 0 10px;
-        a{
-            color: #004986;
-        }
-        &:last-child a{
-            text-decoration: none;
-        }
-    }
+.voice-photo-a{
+	.photo-finish{
+		float:left;
+		img{
+			max-width:380px;
+			width:380px;
+			height:auto;
+		}
+	}
+	.photo-snap{
+		float:right;
+		img{
+			max-width:380px;
+			width:380px;
+			height:auto;
+		}
+	}
 }
-
-/*牛嶋塗装工業様_05お客様が語る牛嶋_詳細*/
-.l-voice-detail{
-    .headline{
-        p{
-            color: #727272;
-            font-size: 14px;
-            padding: 15px 0 0;
-        }
-    }
-    .voicebox{
-        @extend %extend-cf;
-        padding: 25px 0 35px;
-        .voicebox-thumb{
-            float: left;
-            width: 400px;
-        }
-        .voicebox-text{
-            float: left;
-            width: 380px;
-            p{
-                font-weight: bold;
-                font-size: 26px;
-                padding: 0;
-                color: #727272;
-                border-bottom: 1px solid #404646;
-                span{
-                    display: block;
-                    padding: 5px 0 10px;
-                }
-            }
-            .sub-voicebox{
-                padding: 12px 0 10px;
-                p{
-                    border-bottom: none;
-                    font-size: 14px;
-                    line-height: 22px;
-                    font-weight: normal;
-                    color: #282828;
-                    padding: 15px 0 0;
-                }
-            }
-        }
-    }
-    .photo-mix{
-        padding: 0 0 60px;
-    }
+.voice-photo-b{
+	margin:30px 0;
+	img{
+		max-width:780px;
+		width:780px;
+		height:auto;
+	}
+}
+.headline-txt-customer{
+	margin:50px 0 0 0;
+	padding:10px 0;
+	color:#fff;
+	text-indent:10px;
+	background:#7c070d;
+	border:10px solid #4b0307;
+	border-width:0 0 0 10px;
+}
+.voicebox-txt{
+	margin:20px 0 40px;
+	color:10px;
+	font-size:14px;
+	line-height:1.8;
+}
+.voice-bnr{
+	margin:20px 0 40px;
 }
 
-/*牛嶋塗装工業様_06ご近所の施工宅_詳細*/
-.l-works-detail{
-    padding: 0 0 245px;
-    dt{
-        padding: 16px 0 5px;
-        &:first-child{
-           padding: 10px 0 5px;
-        }
-    }
-    dd{
-        border-bottom: 1px solid #7f7f7f;
-        padding: 0 0 5px;
-        font-size: 15px;
-        &:nth-child(-n+8){
-            margin: 0 79px 0 0;
-        }
-    }
-    .headline{
-        padding: 15px 0 0;
-    }
-    .before-thumb{
-        float: left;
-        width: 430px;
-        padding: 0 10px 0 0;
-        background: #fff;
-    }
-    .before-text{
-        padding: 0 0 32px;
-    }
-}
-
-/*牛嶋塗装工業様_07メディア掲載*/
-.l-media-list{
-    .media-list-text{
-        padding: 0 0 60px;
-        color: #434343;
-        font-size: 13px;
-        line-height: 24px;
-        font-weight: 600;
-    }
-    .mediabox{
-        @extend %extend-cf;
-        padding: 0 0 40px;
-        p{
-            line-height: 22px;
-            color: #434343;
-            font: {
-                size:14px;
-            }
-        }
-        .mediabox-thumb{
-            width: 345px;
-            float: left;
-        }
-        .mediabox-text{
-            float: left;
-            width: 410px;
-            padding: 0 0 0 20px;
-        }
-        &:last-child{
-            @extend %extend-cf;
-            padding: 0 0 70px;
-        }
-        .media-title{
-            padding: 20px 0 0;
-        }
-    }
-}
+// ============================
+// execution
+// ============================
+/*==============================
+ご近所の施工宅
+==============================*/
 
 
-/*牛嶋塗装工業様_08牛嶋塗装工業の保証*/
-.l-warrantybox{
-    line-height: 22px;
-    letter-spacing: -0.5px;
-    padding: 0 0 35px;
-    .warrantybox-text{
-        width: 535px;
-        float: left
-    }
-    .warrantybox-thumb{
-        float: right;
-    }
+.execution-lead{
+	margin:30px 0;
 }
-.warranty-contents{
-    line-height: 20px;
-    font-size: 14px;
-    color: #434343;
-    dt{
-        padding: 0 0 0 23px;
-    }
-    dd{
-        padding: 15px 0 38px 100px;
-        &:last-child{
-            padding: 15px 0 90px 100px;
-        }
-    }
+.execution-box{
+	margin:0 0 80px;
+	.headline-txt{
+		padding:5px 25px;
+		margin:20px 0;
+		background:url(assets/img/module/headline_bg.png) top left repeat-y;
+	}
 }
-
-/*牛嶋塗装工業様_09専門家コラム一覧**/
-.blogbox{
-    @extend %extend-cf;
-    padding: 0 0 35px;
-    .blog-thumb{
-        float: left;
-        width: 140px;
-        padding: 0 20px 0 0;
-    }
-    .blog-text{
-        width: 620px;
-        float: right;
-        line-height: 20px;
-        .date{
-            border-bottom: 2px solid #b5b5b5;
-            margin: 0 0 7px;
-            padding: 0 0 3px;
-        }
-        .read-more{
-            text-align: right;
-            padding: 5px 0 0;
-            a{
-                color:#004986;
-                font-size: 14px;
-                font-weight: bold;
-            }
-        }
-    }
+.execution-photo{
+	margin:0 0 50px;
+	img{
+		max-width:780px;
+		height:auto;
+	}
 }
-.pagination-center{
-    text-align: center;
-    padding: 26px 0 100px;
+.execution-mes{
+	font-size:14px;
+	line-height:2;
+	color:#333333;
 }
-
-/*牛嶋塗装工業様_09専門家コラム個別記事*/
-.l-blog-detail{
-    .date{
-        border-bottom: 2px solid #b5b5b5;
-        margin: 0 0 7px;
-        padding: 0 0 10px;
-        font-weight: bold;
-        color: #333333;
-        font-size: 18px;
-
-    }
-    .blog-detail-box{
-        padding: 8px 0 0;
-        line-height: 26px;
-        .detail-box-text{
-            width: 520px;
-            padding: 0 20px 0 0;
-            float: left;
-        }
-        .detail-box-thumb{
-            float: right;
-        }
-    }
-    .l-page-nav{
-        @extend %extend-cf;
-        padding: 55px 0 390px;
-        text-align: center;
-        li{
-            display: inline-block;
-            padding: 0 85px 0 0;
-            &:first-child{
-                color: #626262;
-            }
-            &:last-child{
-                padding: 0;
-            }
-            a{
-                font-weight: bold;
-                color: #004986;
-            }
-        }
-    }
+.l-works {
+	padding:0 0 80px 0;
+	.works-list {
+		width:810px;
+		li {
+			margin:0 30px 30px 0;
+			.works-head {
+				color:#FFF;
+				text-align:center;
+				background:#333;
+				font-weight:400;
+				border:none;
+			}
+			.works-photo {
+				img {
+					display:block;
+					line-height:1;
+				}
+			}
+			.works-detail {
+				margin:0 0 5px 0;
+				height:70px;
+				font-size:14px;
+				line-height:1.5;
+				background:url(assets/img/execution/execution_box_bg.png) repeat-y 0 0;
+			}
+			.date{
+				color:#004986;
+				border-bottom:0px !important;
+			}
+		}
+	}
+	a:link,
+	a:visited{
+		color:#004986;
+		text-decoration:none;
+	}
+	a:hover{
+		color:#004986;
+		text-decoration:underline;
+	}
+	.works-manth{
+		font-size:16px;
+		p{
+			margin:0 0 25px 0;
+		} 
+		a{
+			margin:0 16px 0 0;
+		}
+	}
 }
-/*牛嶋塗装工業様_10料金*/
-.l-price-guide{
-    padding: 0 0 31px;
-    p{
-        line-height: 26px;
-        letter-spacing: -0.3px;
-        color: #333333;
-    }
+.execution-head{
+	margin:0 0 40px;
+	color:#783300;
+	.clm-l{
+		float:left;
+		font-size:18px;
+		font-weight:900;
+	}
+	.execution-craftsman{
+		float:right;
+		margin:5px 0;
+		font-size:14px;
+		text-align:right;
+	}
 }
-.l-price-reference{
-    text-align: center;
-    padding: 0 0 40px;
-    li{
-        display: inline;
-        padding: 0 16px 0 0;
-        &:last-child{
-            padding: 0;
-        }
-    }
-}
-.l-estimate{
-    padding: 0;
-    font-size: 14px;
-    line-height: 22px;
-    ul{
-        text-align: center;
-        &.pic-list1{
-            padding: 18px 0 15px 0;
-            li{
-                display: inline-block;
-                margin: 0 70px 0 0;
-                width: 255px;
-                &:last-child{
-                   margin: 0;
-                }
-                span{
-                    display: block;
-                    text-align: left;
-                    padding: 10px 0 0;
-                }
-            }
-        }
-        &.pic-list2{
-            padding: 60px 0 35px;
-            li{
-                width: 370px;
-                margin: 0 30px 0 0;
-                display: inline-table;
-                &:last-child{
-                    margin: 0;
-                }
-                span{
-                    display: block;
-                    text-align: left;
-                    &.ttl{
-                        font-weight: bold;
-                        font-size: 16px;
-                        padding: 15px 0 0;
-                    }
-                }
-            }
-        }
-        &.pic-list3{
-            padding: 35px 0 143px;
-            li{
-                display: inline-table;
-                width: 255px;
-                margin: 0 50px 0 0;
-                &:last-child{
-                    margin: 0;
-                }
-            }
-        }
-    }
+.execution-foot{
+	margin:50px 0;
+	text-align:center;
+	p{
+		margin:50px 0;
+		font-size:14px;
+	}
 }
 
-.l-estimate-form{
-    padding: 0 0 70px;
-    .message{
-        text-align: center;
-        padding: 0 0 15px;
-    }
-    .notice{
-        text-align: right;
-        padding: 0 0 7px;
-    }
-    span{
-        &.red{
-            color: #9c0001;
-            font-weight: bold;
-        }
-        &.wanted-date{
-            font-weight: bold;
-            padding: 0 12px 0 0;
-            color: #333333;
-        }
-    }
-    th,td{
-        border: 1px solid #7d7d7d;
-        padding: 15px 0 15px 15px;
-    }
-    th{
-        background: #d2d2d2;
-        width: 135px;
-        font-weight: bold;
-        font-size: 14px;
-        vertical-align: top;
-    }
-    td{
-        width: 530px;
-    }
-    input{
-        &.text1{
-            width: 300px;
-        }
-        &.text2{
-            width: 400px;
-        }
-        &.text3{
-            width: 220px;
-        }
-    }
-    .text4{
-        width: 480px;
-        height: 120px;
-    }
-    .estimate-btn{
-        text-align: center;
-        padding: 23px 0 0;
-    }
-
-}
-
-////////////////////////////////////
-/*牛嶋塗装工業様_11会社概要理念代表挨拶*/
-///////////////////////////////////
-.l-greeting{
-    padding: 0 0 40px;
-    .headline{
-        display: block;
-        padding: 0 0 20px;
-    }
-    .greeting-thumb{
-        float: right;
-        padding: 0 0 23px 33px;
-    }
-    p{
-        line-height: 20px;
-    }
-}
-.l-rinen{
-    padding: 0 0 60px;
-    line-height: 22px;
-    ul{
-        text-align: center;
-        @extend %extend-cf;
-        padding: 0 0 20px;
-        li{
-            float: left;
-            &:last-child{
-                float: right;
-            }
-        }
-    }
-}
-.l-company-info{
-    padding: 0 0 100px;
-    dt, dd{
-        float: left;
-        border: 1px solid #a6a6a6;
-        border-bottom: none;
-        padding: 15px 0 15px 14px;
-        &.last{
-            border-bottom: 1px solid #a6a6a6;
-        }
-    }
-    dt{
-        width: 130px;
-        background: #dedede;
-        border-right: none;
-        font-weight: bold;
-    }
-    dd{
-        width: 616px;
-        border-left: none;
-    }
+// ============================
+// media
+// ============================
+/*==============================
+マスコミ取材
+==============================*/
+.l-media{
+	.media-headline{
+		margin:0 0 40px 0;
+	}
+	.media-box{
+		@extend %extend-clearfix;
+		margin:0 0 40px;
+		color:#464646;
+		line-height:1.8;
+		.clm-l{
+			float:left;
+			width:250px;
+			text-align:center;
+		}
+		.clm-r{
+			float:right;
+			width:500px;
+			p{
+				font-size:14px;
+			}
+		}
+		.media-data{
+			margin:15px 0 0;
+			font-size:12px;
+			dd{
+				marghin:0 0 0 1em;
+			}
+		}
+	}
+	.media-lead{
+		margin:30px 0 20px;
+	}
 }
